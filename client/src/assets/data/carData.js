@@ -10,11 +10,10 @@ import img08 from "../all-images/cars-img/mercedes-offer.png";
 
 const carData = [
   {
-    id: 1,
     brand: "Tesla",
     rating: 112,
     carName: "Tesla Malibu",
-    imgUrl: img01,
+    imgUrl: "img01",
     model: "Model 3",
     price: 199,
     speed: "20kmpl",
@@ -26,11 +25,10 @@ const carData = [
   },
 
   {
-    id: 2,
     brand: "Toyota",
     rating: 102,
     carName: "Toyota Aventador",
-    imgUrl: img02,
+    imgUrl: "img02",
     model: "Model-2023",
     price: 149,
     speed: "30kmpl",
@@ -42,11 +40,10 @@ const carData = [
   },
 
   {
-    id: 3,
     brand: "BMW",
     rating: 132,
     carName: "BMW X3",
-    imgUrl: img03,
+    imgUrl: "img03",
     model: "Model-2023",
     price: 249,
     speed: "15kmpl",
@@ -58,11 +55,10 @@ const carData = [
   },
 
   {
-    id: 4,
     brand: "Nissan",
     rating: 102,
     carName: "Nissan Mercielago",
-    imgUrl: img04,
+    imgUrl: "img04",
     model: "Model-2023",
     price: 149,
     speed: "30kmpl",
@@ -74,11 +70,10 @@ const carData = [
   },
 
   {
-    id: 5,
     brand: "Ferrari",
     rating: 94,
     carName: "Ferrari Camry",
-    imgUrl: img05,
+    imgUrl: "img05",
     model: "Model-2023",
     price: 299,
     speed: "10kmpl",
@@ -90,11 +85,10 @@ const carData = [
   },
 
   {
-    id: 6,
     brand: "Mercedes",
     rating: 119,
     carName: "Mercedes Benz XC90",
-    imgUrl: img06,
+    imgUrl: "img06",
     model: "Model-2023",
     price: 399,
     speed: "12kmpl",
@@ -106,11 +100,10 @@ const carData = [
   },
 
   {
-    id: 7,
     brand: "Audi",
     rating: 82,
     carName: "Audi Fiesta",
-    imgUrl: img07,
+    imgUrl: "img07",
     model: "Model 3",
     price: 249,
     speed: "18kmpl",
@@ -122,11 +115,10 @@ const carData = [
   },
 
   {
-    id: 8,
     brand: "Colorado",
     rating: 52,
     carName: "Rolls Royce Colorado",
-    imgUrl: img08,
+    imgUrl: "img08",
     model: "Model 3",
     price: 399,
     speed: "10kmpl",
