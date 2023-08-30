@@ -38,6 +38,11 @@ router.post('/reservecar', authMiddleWare, async (req, res) => {
       return res.status(404).json({ message: 'User not found' });
     }
 
+    // if the car id already exist in reservedCar array dont push
+    if (user.reservedCars.includes(carId)) {
+      return res.status(400).json({ message: 'Car already reserved' });
+    }
+
     user.reservedCars.push(carId);
     await user.save();
     res.status(200).json({ message: "Car reserved successfully" });
@@ -62,6 +67,17 @@ router.get('/car/:id', authMiddleWare, async (req, res) => {
   try {
     const car = await Car.findById(req.params.id);
     res.status(200).json(car);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+});
+
+//get user data though email using get method and fetch car details using the id in the reservedCars array
+router.get('/user/:email', authMiddleWare, async (req, res) => {
+  try {
+    const user = await User.findOne({ email: req.params.email });
+    const cars = await Car.find({ _id: { $in: user.reservedCars } });
+    res.status(200).json({ user, cars });
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
